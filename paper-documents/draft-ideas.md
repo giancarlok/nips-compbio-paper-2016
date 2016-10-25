@@ -39,3 +39,5 @@ The only flexbility of the LSTM in changing the coefficients of the linear trans
 It would indeed be nice if the W were so large that the embedding layer of the LSTM can learn how to map amino acids from different positions to orthogonal subspaces and thus allowing the embedding 32-dimensional vector to have different coefficients at the positions corresponding to the respective subspace. This would only work prefectly if we had fixed length encoding. However what we can do is index-encode the same amino acid at different positions with different indices, leaving it up to the LSTM to learn how much amino acids at different positions should be embedded orthogonally, aka how much they should be treated differently in their linear transformation.  
 
 The encoding: map amino acids at position 1 to integers 1 to 20, at position 2 to integers 21 to 40, at position 3 to integers 41 to 60 etc etc
+
+In order to take out the effects of kmer-index-encoding we first look LSTM and NN when trained only on 9 mers, and compare their performance when given the new encoding vs the old encoding 
