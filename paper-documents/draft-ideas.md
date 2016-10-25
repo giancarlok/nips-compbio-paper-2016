@@ -40,7 +40,7 @@ It would indeed be nice if the W were so large that the embedding layer of the L
 
 The encoding: map amino acids at position 1 to integers 1 to 20, at position 2 to integers 21 to 40, at position 3 to integers 41 to 60 etc etc
 
-## new encoding trained on allmers evaluated on all mers
+## new encoding trained on and evaluated 9 mers
 
 In order to take out the effects of kmer-index-encoding we first look LSTM and NN when trained only on 9 mers, and compare their performance when given the new encoding vs the old encoding:
 
@@ -50,13 +50,15 @@ Here we see in navy the LSTM with the new encoding, the NN with old and new enco
 
 When trained on all mers, we only compare NN old encoding (as kmer-index-encoding messes up the new encoding), with LSTM new and old encoding repsectively. We see that LSTM improves with new encoding and has similar performance than NN (with old encoding). 
 
-## new encoding trained on allmers evaluated on 9 mers
+## new encoding trained on allmers evaluated on all mers
 
 ![](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/new%20embedding%20trained%20on%20all%20mers.png)
 
 
-## new encoding trained on allmers evaluated on non 9 mers
+## new encoding trained on allmers evaluated on 9 mers
 
 ![](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/new%20encoding%20trained%20on%20all%20mers%20evaluated%20on%209%20mers.png)
+
+## new encoding trained on allmers evaluated on non 9 mers
 
 ![](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/new%20encoding%20trained%20on%20all%20mers%20evaluated%20on%20non%209%20mers.png)
