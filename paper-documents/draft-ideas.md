@@ -1,11 +1,11 @@
-# Study 1: FFNN vs LSTM vs kmerLSTM vs LSTM44 vs FFNN44
+# Study 1: NN vs LSTM vs kmerLSTM vs LSTM44 vs NN44
 
 Nomenclature
 
-FFNN: a shallow neural net with one hidden layer of size 10, varying length peptides are encoded via kmer-index-encoding 
+NN: a shallow neural net with one hidden layer of size 10, varying length peptides are encoded via kmer-index-encoding 
 LSTM: bidirectional LSTM of hidden size 50, followed by a sigmoid layer.
 kmerLSTM: kmer-index-encoded LSTM 
-LSTM44, FFNN44: same models as above, only encoded via 44 encoding, which consists of the first 4 and last 4 amino acids of the peptide. 
+LSTM44, NN44: same models as above, only encoded via 44 encoding, which consists of the first 4 and last 4 amino acids of the peptide. 
 
 ![](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/table.png)
 
