@@ -33,5 +33,5 @@ We should analyse the effects of internal architecture of the respective models 
 
 Study 2: New encoding for LSTM
 
-
+[](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/Screen%20Shot%202016-10-25%20at%2009.25.43.png)
 
