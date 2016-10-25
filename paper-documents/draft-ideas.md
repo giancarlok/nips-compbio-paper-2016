@@ -8,7 +8,7 @@ kmerLSTM: kmer-index-encoded LSTM
 LSTM44, FFNN44: same models as above, only encoded via 44 encoding, which consists of the first 4 and last 4 amino acids of the peptide. 
 
 
-$$
+%%latex
 \begin{tabular}{lrrrrrrr}
 
 {} &      3 CV &    9 mers &    fold 1 &    fold 2 &    fold 3 &  fold std &  non-9 mers \\
@@ -20,7 +20,7 @@ NN44      &  0.946067 &  0.956989 &  0.946564 &  0.947490 &  0.944147 &  0.00141
 LSTM44    &  0.944936 &  0.954914 &  0.945201 &  0.947156 &  0.942450 &  0.001930 &    0.915253 \\
 
 \end{tabular}
-$$
+
 
 Conclusion 1: LSTM is worse than FFNN, especially on non 9 mers
 
