@@ -9,7 +9,7 @@ kmerLSTM: kmer-index-encoded LSTM
 
 * LSTM44, NN44: same models as above, only encoded via 44 encoding, which consists of the first 4 and last 4 amino acids of the peptide. 
 
-In the following table, we calculated the AUC scores in percentages for a cutoff of 500 nM
+In the following table, we calculated the AUC scores in percentages for a cutoff of 500 nM. The scores are taken to be the average from epochs 20 to 40
 
 ![](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/table.png)
 
