@@ -2,25 +2,40 @@
 
 Nomenclature
 
-NN: a shallow neural net with one hidden layer of size 10, varying length peptides are encoded via kmer-index-encoding 
-LSTM: bidirectional LSTM of hidden size 50, followed by a sigmoid layer.
+* NN: a shallow neural net with one hidden layer of size 10, varying length peptides are encoded via kmer-index-encoding 
+
+* LSTM: bidirectional LSTM of hidden size 50, followed by a sigmoid layer.
 kmerLSTM: kmer-index-encoded LSTM 
-LSTM44, NN44: same models as above, only encoded via 44 encoding, which consists of the first 4 and last 4 amino acids of the peptide. 
+
+* LSTM44, NN44: same models as above, only encoded via 44 encoding, which consists of the first 4 and last 4 amino acids of the peptide. 
+
+In the following table, we calculated the AUC scores in percentages for a cutoff of 500 nM
 
 ![](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/table.png)
 
 
-Conclusion 1: LSTM is worse than FFNN, especially on non 9 mers
+* Conclusion 1: LSTM is worse than FFNN, especially on non 9 mers
 
-Conclusion 2: kmer LSTM is better than LSTM, especially on non 9 mers
+* Conclusion 2: kmer LSTM is better than LSTM, especially on non 9 mers
 
-Conclusion 3: 44-encoding decreases overall performance of LSTM and FFNN
+* Conclusion 3: 44-encoding decreases overall performance of LSTM and FFNN
 
-Conclusion 4: LSTM44 is better than FFNN44 on non-9mers but is worse than FFNN44 on 9mers.
+* Conclusion 4: LSTM44 is better than FFNN44 on non-9mers but is worse than FFNN44 on 9mers.
 
 We should analyse the effects of internal architecture of the respective models and the effect of the kmer-index-encoding separately. Trained only on 9 mers, LSTM and FFNN still show significant difference in performance. We thus assume that the difference of performance between LSTM and FFNN are partially due to effects of the architecture and then enhanced by the effects of the kmer-index-encoding. 
 
-Study 2: New encoding for LSTM
+# Study 2: New encoding for LSTM
 
+
+The output of the LSTM layer consists of 100 neurons (50 coming form forward LSTM and 50 coming form backward LSTM), followed by a dense sigmoid layer. The shallow net consists of 10 hidden neurons followed by dense sigmoid layer as well. It is quite surprising that 10 hidden neurons outperform 100 hidden neurons! Now why is that? 
+
+As a recap here the equations of the LSTM. In particular let's look at the output equation o_t.  
 ![](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/Screen%20Shot%202016-10-25%20at%2009.25.43.png)
 
+At each time-step, one amino acid is being fed to the embedding layer of the LSTM in the shape of a index encoded vector, which in turn is then transformed into a 32-dimensional vector (32 being the embedding dimension). In the equations the 32-dimensional vector at time step t is x_t. The matrices W map x_t linearly to a 50 dimensional vector. Note that the matrics W are the same for each time-step t , aka for each embedded amino acid x_t. Whereas for the shallow net each amino acid is being mapped with a different linear transformation to each of each hidden neuron! In particular this means that the same amino acid is being transformed by W in the same way no matter the position.
+
+The only flexbility of the LSTM in changing the coefficients of the linear transformation are the hidden states h_t. Our only hope is that the hidden states are smart enough to learn how to modify the coefficients for each time-step. As the matrices U are also time-step independent, it seems that there is only so much hidden states can correct. We thus need to come up with something else. 
+
+It would indeed be nice if the W were so large that the embedding layer of the LSTM can learn how to map amino acids from different positions to orthogonal subspaces and thus allowing the embedding 32-dimensional vector to have different coefficients at the positions corresponding to the respective subspace. This would only work prefectly if we had fixed length encoding. However what we can do is index-encode the same amino acid at different positions with different indices, leaving it up to the LSTM to learn how much amino acids at different positions should be embedded orthogonally, aka how much they should be treated differently in their linear transformation.  
+
+The encoding: map amino acids at position 1 to integers 1 to 20, at position 2 to integers 21 to 40, at position 3 to integers 41 to 60 etc etc
