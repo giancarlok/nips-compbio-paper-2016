@@ -7,7 +7,6 @@ LSTM: bidirectional LSTM of hidden size 50, followed by a sigmoid layer.
 kmerLSTM: kmer-index-encoded LSTM 
 LSTM44, FFNN44: same models as above, only encoded via 44 encoding, which consists of the first 4 and last 4 amino acids of the peptide. 
 
-$\sqrt{2}$
 
 \begin{tabular}{lrrrrrrr}
 
@@ -33,4 +32,6 @@ Conclusion 4: LSTM44 is better than FFNN44 on non-9mers but is worse than FFNN44
 We should analyse the effects of internal architecture of the respective models and the effect of the kmer-index-encoding separately. Trained only on 9 mers, LSTM and FFNN still show significant difference in performance. We thus assume that the difference of performance between LSTM and FFNN are partially due to effects of the architecture and then enhanced by the effects of the kmer-index-encoding. 
 
 Study 2: New encoding for LSTM
+
+
 
