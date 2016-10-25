@@ -1,4 +1,5 @@
-Idea: 
+# Idea 
+
 * use LSTM only to learn long-term dependencies as opposed to local dependencies. 
 * Do a step by step process where you filter out local dependencies of various radii and look at the performance. (very similar to fourier transforms)
 
