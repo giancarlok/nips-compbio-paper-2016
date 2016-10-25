@@ -24,3 +24,4 @@
 
 * So far we have learned local dependencies with different radii. 
 * If there is still more complex long-term dependencies, we might use LSTM to complement what shallow nets cant learn. 
+* instead of feeding one embedded amino acid at a time into the LSTM, we would feed Z_0, Z_1,...
