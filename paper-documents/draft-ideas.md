@@ -46,6 +46,6 @@ In order to take out the effects of kmer-index-encoding we first look LSTM and N
 
 Here we see in navy the LSTM with the new encoding, the NN with old and new encoding in orange and red respectively, as well as the LSTM with the old encoding in blue. LSTM with new encoding clearly improves vs LSTM with old encoding. For the NN the encoding doesnt make much difference, as the NN already has flexible coefficients in the linear combination of each coordinate of the embedded amino acids from different time steps. 
 
+When trained on all mers, we only compare NN old encoding (as kmer-index-encoding messes up the new encoding), with LSTM new and old encoding repsectively. We see that LSTM improves with new encoding and has similar performance than NN (with old encoding). 
 
-
-
+![](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/new%20embedding%20trained%20on%20all%20mers.png)
