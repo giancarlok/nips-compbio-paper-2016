@@ -62,3 +62,6 @@ When trained on all mers, we only compare NN old encoding (as kmer-index-encodin
 ## new encoding trained on allmers evaluated on non 9 mers
 
 ![](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/new%20encoding%20trained%20on%20all%20mers%20evaluated%20on%20non%209%20mers.png)
+
+Quite surprisingly the new encoding doesnt make much of a difference on non 9 mers 
+
