@@ -25,3 +25,12 @@
 * So far we have learned local dependencies with different radii. 
 * If there is still more complex long-term dependencies, we might use LSTM to complement what shallow nets cant learn. 
 * instead of feeding one embedded amino acid at a time into the LSTM, we would feed Z_0, Z_1,..., this would allow the LSTM to forget the right information at the right time, as otherwise the LSTM gets an overload of information and might start forgetting information that turns out useful when looking at the global picture.
+
+
+# Ressources
+
+https://arxiv.org/abs/1408.5882
+https://arxiv.org/abs/1610.03017
+
+
+http://nlpers.blogspot.com/2016/08/fast-easy-baseline-text-categorization.html
