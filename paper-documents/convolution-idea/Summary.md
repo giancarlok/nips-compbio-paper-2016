@@ -1,4 +1,4 @@
-# preliminary remarks
+# A) Preliminary remarks
 
 I ran everything in keras. I was not entirely sure about the keras methods, but I used the method `GlobalAveragePooling1D()`for taking the average of each coordinate across all the 32 dimensional embedded amino acid vectors. 
 
@@ -12,7 +12,7 @@ All results are expressed in terms of AUC, where the cutoff corresponds to initi
 
 We used 3 fold cross validation. 
 
-# Training only on 9 mers
+# B) Training only on 9 mers
 
 ## Experiment 1: finding the right filter length cutoff
 
@@ -33,5 +33,5 @@ It has hidden size 50.
 
 ![](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/LSTM%20vs%20NN8%20vs%20NN%20trained%20on%209%20mers.png)
 
-# Training only on allmers
+# C) Training only on allmers
 
