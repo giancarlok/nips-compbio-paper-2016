@@ -26,11 +26,12 @@ NN_k: shallow net with one hidden layer of size 10, where inputs are the concate
 NN_8 outperforms the initial shallow net NN , whereas NN_6 doesnt. 
 NN_8 > NN >  NN_6 > NN_4 > NN_2 > NN_0
 
-## Experiment 2: involving the LSTM
+## Experiment 2: involving the LSTM [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/LSTM%20vs%20NN8%20vs%20NN%20trained%20on%209%20mers.%20.ipynb)
 
 the LSTM model that we will run against NN_8 and NN, will have as input the concatenated (and then (9,32)-reshaped) vector [Z_0,Z_1..., Z_8]. 
 It has hidden size 50.
 
+![](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/LSTM%20vs%20NN8%20vs%20NN%20trained%20on%209%20mers.png)
 
 # Training only on allmers
 
