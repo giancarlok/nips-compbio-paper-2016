@@ -41,10 +41,20 @@ It has hidden size 50.
 
 ## Experiment 1: NN vs NN_k's (NN_k's WITHOUT kmer-encoding) [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/NN%20vs%20NN_k's%20trained%20on%20allmers%20(without%20kmer).ipynb)
 
+![](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/NN%20vs%20NNk%20allmers%20on%20allmers%20without%20kmer%20.png)
 
+Clearly NN outperforms everybody else. Note that here NN has kmer encoding while all NNk's dont have kmer-encoding. Note that kmer-encoding is not necessary for NNk models due to taking average (aka `GlobalAveragePooling1D()` method), so we might be tempted to first try without kmer-encoding. Now that we saw that is gives worse performance without, let us now try NNk models with kmer encoding.  
 
 ## Experiment 2: NN vs NN_k's (NN_k's WITH kmer-encoding) [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/NN%20vs%20NN_k's%20trained%20on%20allmers%20(without%20kmer).ipynb)
 
+![](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/NN%20vs%20NNk%20allmers%20on%20allmers.png)
+
+NN8 clearly outperforms NN, when trained on all  mers. All NN_k's as well as NN having kmer-encoding. 
+
+In the notebook, the performance is then further analysed on 9 mers and non 9 mers. The gap between NN_8 and NN becomes larger on non 9 mers.
+
 ## Experiment 3: LSTM vs NN vs NN_8 (LSTM WITHOUT kmer-encoded) [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/LSTM%20vs%20NN8%20vs%20NN%20trained%20on%20all%20mers%20(lstm%20without%20kmer).ipynb)
+
+
 
 ## Experiment 4: LSTM vs NN vs NN_8 (all models WITH kmer-encoded) [notebook]()
