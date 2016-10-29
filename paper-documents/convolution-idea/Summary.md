@@ -14,7 +14,7 @@ We used 3 fold cross validation.
 
 # B) Training only on 9 mers
 
-## Experiment 1: finding the right filter length cutoff [](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/NN%20vs%20NN_k%20's%20trained%20on%209%20mers.ipynb)
+## Experiment 1: finding the right filter length cutoff [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/NN%20vs%20NN_k%20's%20trained%20on%209%20mers.ipynb)
 
 Z_0: average 32 dimensional vector of the 9 embedded vectors 
 Z_1: average of the convolutions with filter length = 2
