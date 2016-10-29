@@ -14,7 +14,7 @@ We used 3 fold cross validation.
 
 # B) Training only on 9 mers
 
-## Experiment 1: finding the right filter length cutoff
+## Experiment 1: finding the right filter length cutoff [](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/NN%20vs%20NN_k%20's%20trained%20on%209%20mers.ipynb)
 
 Z_0: average 32 dimensional vector of the 9 embedded vectors 
 Z_1: average of the convolutions with filter length = 2
@@ -25,6 +25,8 @@ NN_k: shallow net with one hidden layer of size 10, where inputs are the concate
 
 NN_8 outperforms the initial shallow net NN , whereas NN_6 doesnt. 
 NN_8 > NN >  NN_6 > NN_4 > NN_2 > NN_0
+
+![](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/NN%20vs%20NN_k%20trained%20on%209%20mers.png)
 
 ## Experiment 2: involving the LSTM [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/LSTM%20vs%20NN8%20vs%20NN%20trained%20on%209%20mers.%20.ipynb)
 
