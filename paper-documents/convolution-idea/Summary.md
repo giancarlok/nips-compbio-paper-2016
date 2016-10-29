@@ -24,7 +24,9 @@ Z_k: average of the convolutions with filter length = k+1
 NN_k: shallow net with one hidden layer of size 10, where inputs are the concatenation of Z_0,...,Z_k
 
 NN_8 outperforms the initial shallow net NN , whereas NN_6 doesnt. 
-NN_8 > NN >  NN_6 > NN_4 > NN_2 > NN_0
+NN_8 > NN >  NN_6 > NN_4 > NN_2 > NN_0.
+
+(Also note that there is a significant gap between NN_2 and NN_4.)
 
 ![](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/NN%20vs%20NN_k%20trained%20on%209%20mers.png)
 
@@ -38,6 +40,8 @@ It has hidden size 50.
 # C) Training only on allmers
 
 ## Experiment 1: NN vs NN_k's (NN_k's WITHOUT kmer-encoding) [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/NN%20vs%20NN_k's%20trained%20on%20allmers%20(without%20kmer).ipynb)
+
+
 
 ## Experiment 2: NN vs NN_k's (NN_k's WITH kmer-encoding) [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/NN%20vs%20NN_k's%20trained%20on%20allmers%20(without%20kmer).ipynb)
 
