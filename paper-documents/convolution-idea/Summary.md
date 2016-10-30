@@ -37,7 +37,7 @@ It has hidden size 50.
 
 ![](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/LSTM%20vs%20NN8%20vs%20NN%20trained%20on%209%20mers.png)
 
-# C) Training only on allmers
+# C) Training on allmers
 
 ## Experiment 1: NN vs NN_k's (NN_k's WITHOUT kmer-encoding) [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/NN%20vs%20NN_k's%20trained%20on%20allmers%20(without%20kmer).ipynb)
 
