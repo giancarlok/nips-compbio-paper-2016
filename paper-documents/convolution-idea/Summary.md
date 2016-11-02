@@ -61,4 +61,10 @@ As in the previous section, let's add the LSTM to the whole story. A priori LSTM
 
 We see that LSTM takes forever to come up to speed with the other models. So let us try kmer-encoding. 
 
-## Experiment 4: LSTM vs NN vs NN_8 (all models WITH kmer-encoded) [notebook]()
+## Experiment 4: LSTM vs NN vs NN_8 (all models WITH kmer-encoded ) [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/new%20LSTM%20vs%20NN%20vs%20NN8%20(lstm%20without%20kmer).ipynb)
+
+not good idea, performance drops like crazy.
+
+## Experiment 5: new LSTM vs NN vs NN_8 (lstm WITHOUT kmer-encoded) [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/new%20LSTM%20vs%20NN%20vs%20NN8%20(lstm%20without%20kmer).ipynb)
+
+![](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/new%20LSTM%20vs%20NN%20vs%20NN8.png)
