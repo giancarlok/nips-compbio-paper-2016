@@ -45,7 +45,7 @@ It has hidden size 50.
 
 Clearly NN outperforms everybody else. Note that here NN has kmer encoding while all NNk's dont have kmer-encoding. Note that kmer-encoding is not necessary for NNk models due to taking average (aka `GlobalAveragePooling1D()` method), so we might be tempted to first try without kmer-encoding. Now that we saw that is gives worse performance without, let us now try NNk models with kmer encoding.  
 
-## Experiment 2: NN vs NN_k's (NN_k's WITH kmer-encoding) [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/NN%20vs%20NN_k's%20trained%20on%20allmers%20(without%20kmer).ipynb)
+## Experiment 2: NN vs NN_k's (NN_k's WITH kmer-encoding) [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/NN%20vs%20NN_k's%20trained%20on%20all%20mers%20(with%20mer%20encoding%20).ipynb)
 
 ![](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/NN%20vs%20NNk%20allmers%20on%20allmers.png)
 
