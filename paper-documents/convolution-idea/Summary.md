@@ -74,3 +74,5 @@ not good idea, performance of LSTM drops like crazy.
 Stacking two convolutional layers while not doing any pooling doesnt seem to be helpful. NN8 still performs best.  
 
 ## Experiment 6: NN vs NN_8 vs NN_8 without averaging [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/NN%20vs%20NN8%20vs%20NN8_without_averaging.ipynb)
+
+without pooling performs similar to pooling
