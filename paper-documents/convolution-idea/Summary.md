@@ -68,3 +68,9 @@ not good idea, performance of LSTM drops like crazy.
 ## Experiment 5: new LSTM vs NN vs NN_8 (lstm WITHOUT kmer-encoded) [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/new%20LSTM%20vs%20NN%20vs%20NN8%20(lstm%20without%20kmer).ipynb)
 
 ![](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/new%20LSTM%20vs%20NN%20vs%20NN8.png)
+
+## Experiment 5: NN vs NN_8 vs 2 layer conv NN_8 [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/NN%20vs%20NN8%20vs%20NN8w2convlayers_without_averaging.ipynb)
+
+Stacking two convolutional layers while not doing any pooling doesnt seem to be helpful. NN8 still performs best.  
+
+## Experiment 6: NN vs NN_8 vs NN_8 without averaging [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/NN%20vs%20NN8%20vs%20NN8_without_averaging.ipynb)
