@@ -53,13 +53,16 @@ NN8 clearly outperforms NN, when trained on all  mers. All NN_k's as well as NN 
 
 In the notebook, the performance is then further analysed on 9 mers and non 9 mers. The gap between NN_8 and NN becomes larger on non 9 mers.
 
-## Experiment 3: LSTM vs NN vs NN_8 (LSTM WITHOUT kmer-encoded) [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/LSTM%20vs%20NN8%20vs%20NN%20trained%20on%20all%20mers%20(lstm%20without%20kmer).ipynb)
+## Experiment 3a: LSTM vs NN vs NN_8 (LSTM WITHOUT kmer-encoded) [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/LSTM%20vs%20NN8%20vs%20NN%20trained%20on%20all%20mers%20(lstm%20without%20kmer).ipynb)
 
 As in the previous section, let's add the LSTM to the whole story. A priori LSTM doesnt require a fixed length encoding, so let us first try without. 
 
 ![](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/LSTM%20vs%20NN%20vs%20NNk%20(lstm%20without%20kmer)%20.png)
 
 We see that LSTM takes forever to come up to speed with the other models. So let us try kmer-encoding. 
+
+## Experiment 3b: LSTM vs NN vs NN_8 (LSTM WITHOUT kmer-encoded) (longer epochs)
+
 
 ## Experiment 4: LSTM vs NN vs NN_8 (all models WITH kmer-encoded ) [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/new%20LSTM%20vs%20NN%20vs%20NN8%20(lstm%20without%20kmer).ipynb)
 
@@ -69,10 +72,10 @@ not good idea, performance of LSTM drops like crazy.
 
 ![](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/new%20LSTM%20vs%20NN%20vs%20NN8.png)
 
-## Experiment 5: NN vs NN_8 vs 2 layer conv NN_8 [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/NN%20vs%20NN8%20vs%20NN8w2convlayers_without_averaging.ipynb)
+## Experiment 6: NN vs NN_8 vs 2 layer conv NN_8 [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/NN%20vs%20NN8%20vs%20NN8w2convlayers_without_averaging.ipynb)
 
 Stacking two convolutional layers while not doing any pooling doesnt seem to be helpful. NN8 still performs best.  
 
-## Experiment 6: NN vs NN_8 vs NN_8 without averaging [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/NN%20vs%20NN8%20vs%20NN8_without_averaging.ipynb)
+## Experiment 7: NN vs NN_8 vs NN_8 without averaging [notebook](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/NN%20vs%20NN8%20vs%20NN8_without_averaging.ipynb)
 
 without pooling performs similar to pooling
