@@ -7,3 +7,4 @@
 
 ![](https://github.com/giancarlok/nips-compbio-paper-2016/blob/master/paper-documents/convolution-idea/regularization/W%20regularization.png)
 
+W seems to be the right parameter to tune
